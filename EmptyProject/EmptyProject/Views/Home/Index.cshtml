@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Student>
+
+
+<h3>Students list</h3>
+<strong><a href="/Home/Create">Create new Student</a></strong>
+
+@foreach (var student in Model)
+{
+    <div class="my-item-group">
+        <span>
+            <em>@student.Id</em>
+        </span>
+        <span>
+            <a class="btn btn-primary" asp-controller="Home" asp-action="Details" asp-route-id="@student.Id">@student.Name</a>
+        </span>
+        <span>
+            <a class="btn btn-secondary" asp-controller="Home" asp-action="Edit" asp-route-id="@student.Id">Edit</a>
+        </span>
+        <span>
+            <a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@student.Id">Delete</a>
+        </span>
+    </div>
+}

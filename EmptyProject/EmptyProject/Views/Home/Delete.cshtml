@@ -1,0 +1,12 @@
+﻿@model EmptyProject.Models.Student
+
+<h3>Delete Student?</h3>
+
+@*<p>@Model.Name"</p>*@
+@*<a href="/Home/ConfirmDelete/@Model.Id">Delete</a>*@
+
+<form action="/Home/ConfirmDelete" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input readonly="readonly" type="text" name="Name" value="@Model.Name" />
+    <input type="submit" value="Delete" />
+</form>

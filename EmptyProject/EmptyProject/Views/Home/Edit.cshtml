@@ -1,0 +1,9 @@
+﻿@model EmptyProject.Models.Student
+
+<h3>Edit Student</h3>
+
+<form action="/Home/Edit" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="text" name="Name" value="@Model.Name" />
+    <input type="submit" value="Update" />
+</form>
